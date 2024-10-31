@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "dubbo-js-private-workspace",
+  "scripts": {
+    "prepare": "husky install",
+    "clean": "pnpm --filter \"./packages/**\" clean",
+    "format": "prettier --write \"**/*.{ts,js,vue,json}\"",
+    "lint": "eslint \"**/*.{js,ts,vue}\"",
+    "lint-fix": "pnpm lint --fix"
+  },
+  "workspaces": [
+    "./packages/cli",
+    "./packages/ui",
+    "./packages/server"
+  ],
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@types/node": "^20.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.2",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.57.1",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^9.30.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "5.0.3"
+  },
+  "license": "Apache-2.0"
+}
